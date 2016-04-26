@@ -9,8 +9,8 @@ RUN sudo apt-get update && \
 RUN curl -sSL https://swift.org/keys/all-keys.asc | sudo gpg --import - && \
     sudo gpg --keyserver hkp://pool.sks-keyservers.net --refresh-keys Swift
 
-ENV SWIFT_BUILD_URL https://swift.org/builds/swift-2.2.1-release/ubuntu1510/swift-2.2.1-RELEASE/swift-2.2.1-RELEASE-ubuntu15.10.tar.gz
-ENV SWIFT_ARCHIVE_NAME swift-2.2.1-RELEASE-ubuntu15.10
+#ENV SWIFT_BUILD_URL https://swift.org/builds/swift-2.2.1-release/ubuntu1510/swift-2.2.1-RELEASE/swift-2.2.1-RELEASE-ubuntu15.10.tar.gz
+ENV SWIFT_BUILD_URL https://swift.org/builds/development/ubuntu1510/swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a/swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a-ubuntu15.10.tar.gz
 
 # Download and install Swift
 RUN curl -sSL $SWIFT_BUILD_URL | sudo tar -xvz -C / --strip 1
